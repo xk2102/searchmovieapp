@@ -1,3 +1,5 @@
+//added a comment on the branch
+
 import './App.css';
 import React, { useState } from "react";
 import MovieCard from "./components/MovieCard";
