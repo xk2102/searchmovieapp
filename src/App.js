@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import MovieCard from "./components/MovieCard";
 
 function App() {
-  
+
   const [searchTerm, setSearchTerm] = useState("star wars");
   const [movies, setMovies] = useState([]);
 
@@ -31,6 +31,11 @@ function App() {
         listOfImdbIDs.map((imdbID) => getMovies(imdbID))
       );
       console.log(listOfMovies);
+
+      listOfMovies.sort((a, b) => {
+        return a.Year - b.Year;
+      });
+
       setMovies(listOfMovies);
 
     } else {
