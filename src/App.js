@@ -1,5 +1,3 @@
-//here is a comment
-
 import './App.css';
 import React, { useState } from "react";
 import MovieCard from "./components/MovieCard";
