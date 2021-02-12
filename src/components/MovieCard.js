@@ -2,7 +2,7 @@ import React from "react";
 
 function MovieCard(props) {
     return (
-        <div className="container-movie">
+        <article className="container-movie">
 
             <div id="title"><p>[{props.Year}] {props.Title}</p></div>
             <div id="plot"><p>{props.Plot}</p></div>
@@ -15,7 +15,7 @@ function MovieCard(props) {
                 </p>
             </div>
 
-        </div>
+        </article>
 
     )
 }
