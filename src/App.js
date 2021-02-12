@@ -61,6 +61,7 @@ function App() {
         <div>
           {movies.length === 1 ? <p>Found 1 result:</p> : <p>Found {movies.length} results: </p>}
           {movies.map((movie, index) => (
+            // <MovieCard key={index} {...movie} />
             <MovieCard key={index} {...movie} />
           ))}
         </div>
