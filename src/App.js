@@ -3,6 +3,8 @@
 import './App.css';
 import React, { useState } from "react";
 import MovieCard from "./components/MovieCard";
+import PropTypes from 'prop-types'
+
 
 function App() {
 
@@ -22,6 +24,9 @@ function App() {
       var response = await fetch(url);
       var jsonData = await response.json();
       return jsonData;
+    }
+    getMovies.propTypes = {
+      id: PropTypes.string.isRequired
     }
 
     if (jsonData.Response === "True") {
@@ -61,7 +66,6 @@ function App() {
         <div>
           {movies.length === 1 ? <p>Found 1 result:</p> : <p>Found {movies.length} results: </p>}
           {movies.map((movie, index) => (
-            // <MovieCard key={index} {...movie} />
             <MovieCard key={index} {...movie} />
           ))}
         </div>
